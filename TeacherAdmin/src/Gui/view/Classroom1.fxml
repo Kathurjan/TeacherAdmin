@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.Classroom1">
    <children>
@@ -27,9 +28,11 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <Label layoutX="188.0" layoutY="14.0" text="Cs1" />
-                  <TextField fx:id="screen" editable="false" layoutX="207.0" layoutY="117.0" mouseTransparent="true" prefHeight="129.0" prefWidth="149.0" />
-                  <Label fx:id="Selectedstudent" layoutX="209.0" layoutY="93.0" text="Label" />
-                  <Label fx:id="StudentMessage" layoutX="174.0" layoutY="143.0" text="Label" />
+                  <TextField fx:id="screen" alignment="TOP_LEFT" editable="false" layoutX="55.0" layoutY="118.0" mouseTransparent="true" opacity="0.48" prefHeight="129.0" prefWidth="321.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <Label fx:id="Selectedstudent" layoutX="184.0" layoutY="93.0" text="Label" />
                </children></AnchorPane>
         </items>
       </SplitPane>
