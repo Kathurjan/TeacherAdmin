@@ -59,7 +59,7 @@ public class Classroom1 implements Initializable {
             Selectedstudent.setText(name);
             screen.setText(ranStringGenerator());
 
-            System.out.println(ranStringGenerator());
+            //System.out.println(ranStringGenerator());
         }
     }
     public  String ranStringGenerator(){
