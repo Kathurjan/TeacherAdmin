@@ -12,11 +12,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Classroom1 implements Initializable {
     public TextField screen;
     public Label Selectedstudent;
+    public Label StudentMessage;
     private Studentlogic studentlogic;
     @FXML
     private TableView<Student> Class1TableView;
@@ -55,7 +57,29 @@ public class Classroom1 implements Initializable {
         else{
             String name = student.getName();
             Selectedstudent.setText(name);
-
+            screen.setText(ranStringGenerator());
+          
+            System.out.println(ranStringGenerator());
         }
+    }
+    public  String ranStringGenerator(){
+        Random random = new Random(5);
+        String message = "";
+        if (random.equals(1)){
+            message = "I was here for like 3 hours, but had to leave early";
+        }
+        if (random.equals(2)){
+            message = "There is a mistake, it says i was not here on the 5th but I was";
+        }
+        if (random.equals(3)){
+            message= "";
+        }
+        if (random.equals(4)){
+            message = "I was not here last week, but you marked me down as I was";
+        }
+        if (random.equals(5)){
+            message = "I was here monday, but had to leave early";
+        }
+        return message;
     }
 }
