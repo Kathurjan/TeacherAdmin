@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class Classroom1 implements Initializable {
     public TextField screen;
-    public Label Selectedstudent;
+    public Label SelectedStudent;
     public Label StudentMessage;
     private Studentlogic studentlogic;
     @FXML
@@ -48,21 +48,22 @@ public class Classroom1 implements Initializable {
         Class1TableView.setItems(studentlogic.getStudent());
 
     }
-
-    public void displaySelected(MouseEvent mouseEvent) {
+    @FXML
+    private void displaySelected(MouseEvent mouseEvent) {
         Student student = Class1TableView.getSelectionModel().getSelectedItem();
         if (student.equals(null)){
-            Selectedstudent.setText("Nothing Selected");
+            SelectedStudent.setText("Nothing Selected");
         }
         else{
             String name = student.getName();
-            Selectedstudent.setText(name);
+            SelectedStudent.setText(name);
             screen.setText(ranStringGenerator());
 
             //System.out.println(ranStringGenerator());
         }
     }
-    public  String ranStringGenerator(){
+    @FXML
+    private   String ranStringGenerator(){
         Random random = new Random();
         int x = random.nextInt(5)+1;
         String message = "";
