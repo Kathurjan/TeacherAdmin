@@ -58,26 +58,27 @@ public class Classroom1 implements Initializable {
             String name = student.getName();
             Selectedstudent.setText(name);
             screen.setText(ranStringGenerator());
-          
+
             System.out.println(ranStringGenerator());
         }
     }
     public  String ranStringGenerator(){
-        Random random = new Random(5);
+        Random random = new Random();
+        int x = random.nextInt(5)+1;
         String message = "";
-        if (random.equals(1)){
+        if (x == 1){
             message = "I was here for like 3 hours, but had to leave early";
         }
-        if (random.equals(2)){
+        if (x == 2){
             message = "There is a mistake, it says i was not here on the 5th but I was";
         }
-        if (random.equals(3)){
+        if (x == 3){
             message= "";
         }
-        if (random.equals(4)){
+        if (x == 4){
             message = "I was not here last week, but you marked me down as I was";
         }
-        if (random.equals(5)){
+        if (x == 5){
             message = "I was here monday, but had to leave early";
         }
         return message;
