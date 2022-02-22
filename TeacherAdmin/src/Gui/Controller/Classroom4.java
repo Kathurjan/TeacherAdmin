@@ -29,8 +29,8 @@ public class Classroom4 implements Initializable {
 
 
     }
-
-    public void populateTableview (){
+    @FXML
+    private void populateTableview (){
 
         StudentName.setCellValueFactory((new PropertyValueFactory<Student,String>("name")));
         StudentAbsence.setCellValueFactory((new PropertyValueFactory<Student,Integer>("Absence")));
