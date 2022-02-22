@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 public class Classroom1 implements Initializable {
     public TextField screen;
     public Label Selectedstudent;
-    public Label StudentMessage;
     private Studentlogic studentlogic;
     @FXML
     private TableView<Student> Class1TableView;
