@@ -32,7 +32,7 @@
                      <font>
                         <Font size="15.0" />
                      </font></TextField>
-                  <Label fx:id="Selectedstudent" layoutX="184.0" layoutY="93.0" text="Label" />
+                  <Label fx:id="SelectedStudent" layoutX="184.0" layoutY="93.0" text="Label" />
                </children></AnchorPane>
         </items>
       </SplitPane>

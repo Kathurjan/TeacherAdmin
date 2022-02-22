@@ -15,9 +15,12 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 public class Classroom4 implements Initializable {
-    public TextField screen;
-    public Label SelectedStudent;
-    public Label StudentMessage;
+    @FXML
+    private TextField screen;
+    @FXML
+    private Label SelectedStudent;
+    @FXML
+    private Label StudentMessage;
     private Studentlogic studentlogic;
     @FXML
     private TableView<Student> Class4TableView;
@@ -46,7 +49,7 @@ public class Classroom4 implements Initializable {
 
     }
     @FXML
-    private void displaySelected(MouseEvent mouseEvent) {
+    private void displaySelected(MouseEvent mouseEvent) throws NullPointerException {
         Student student = Class4TableView.getSelectionModel().getSelectedItem();
         if (student.equals(null)){
             SelectedStudent.setText("Nothing Selected");

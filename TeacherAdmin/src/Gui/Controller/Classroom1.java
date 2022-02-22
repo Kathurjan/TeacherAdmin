@@ -49,7 +49,7 @@ public class Classroom1 implements Initializable {
 
     }
     @FXML
-    private void displaySelected(MouseEvent mouseEvent) {
+    private void displaySelected(MouseEvent mouseEvent) throws NullPointerException {
         Student student = Class1TableView.getSelectionModel().getSelectedItem();
         if (student.equals(null)){
             SelectedStudent.setText("Nothing Selected");
