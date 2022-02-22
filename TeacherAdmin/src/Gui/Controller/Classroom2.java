@@ -39,4 +39,6 @@ public class Classroom2 implements Initializable {
         Class1TableView.setItems(studentlogic.getStudent1());
 
     }
+
+
 }
