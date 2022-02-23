@@ -51,8 +51,8 @@ public class Classroom2 implements Initializable {
         StudentName.setCellValueFactory((new PropertyValueFactory<Student,String>("name")));
         StudentAbsence.setCellValueFactory((new PropertyValueFactory<Student,Double>("Absence")));
 
-        System.out.println(studentlogic.getStudent());
-        Class2TableView.setItems(studentlogic.getStudent());
+        System.out.println(studentlogic.getStudent1());
+        Class2TableView.setItems(studentlogic.getStudent1());
 
     }
     @FXML
