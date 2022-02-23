@@ -4,7 +4,9 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.Classroom3">
     <children>
@@ -12,7 +14,7 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <TableView fx:id="Class1TableView" layoutX="-12.0" layoutY="53.0" prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="Class3TableView" layoutX="-12.0" layoutY="53.0" onMouseClicked="#displaySelected" prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
                                 <TableColumn fx:id="StudentName" prefWidth="75.0" text="Name" />
                                 <TableColumn fx:id="StudentAbsence" prefWidth="75.0" text="Absence" />
@@ -25,9 +27,12 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-
-                        <Label layoutX="188.0" layoutY="14.0" text="Cs3" />
-
+                        <Label layoutX="188.0" layoutY="14.0" text="Cs1" />
+                        <TextField fx:id="screen" alignment="TOP_LEFT" editable="false" layoutX="55.0" layoutY="118.0" mouseTransparent="true" opacity="0.48" prefHeight="129.0" prefWidth="321.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font></TextField>
+                        <Label fx:id="SelectedStudent" layoutX="184.0" layoutY="93.0" text="Label" />
                     </children></AnchorPane>
             </items>
         </SplitPane>

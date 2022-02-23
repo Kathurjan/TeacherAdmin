@@ -2,12 +2,10 @@ package Gui.Controller;
 
 import BLL.Studentlogic;
 import Be.Student;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
@@ -17,7 +15,15 @@ import java.util.ResourceBundle;
 
 public class Classroom1 implements Initializable {
     public TextField screen;
-    public Label Selectedstudent;
+
+    public Label SelectedStudent;
+    public Label StudentMessage;
+    public Button DeclineAccept;
+    public Button AcceptReason;
+    public TextArea absence;
+
+
+
     private Studentlogic studentlogic;
     @FXML
     private TableView<Student> Class1TableView;
@@ -47,21 +53,22 @@ public class Classroom1 implements Initializable {
         Class1TableView.setItems(studentlogic.getStudent());
 
     }
-
-    public void displaySelected(MouseEvent mouseEvent) {
+    @FXML
+    private void displaySelected(MouseEvent mouseEvent) throws NullPointerException {
         Student student = Class1TableView.getSelectionModel().getSelectedItem();
         if (student.equals(null)){
-            Selectedstudent.setText("Nothing Selected");
+            SelectedStudent.setText("Nothing Selected");
         }
         else{
             String name = student.getName();
-            Selectedstudent.setText(name);
+            SelectedStudent.setText(name);
             screen.setText(ranStringGenerator());
 
             //System.out.println(ranStringGenerator());
         }
     }
-    public  String ranStringGenerator(){
+    @FXML
+    private   String ranStringGenerator(){
         Random random = new Random();
         int x = random.nextInt(5)+1;
         String message = "";
@@ -82,4 +89,36 @@ public class Classroom1 implements Initializable {
         }
         return message;
     }
+
+
+    public void DeclineAbsence(ActionEvent event) {
+        Student student = Class1TableView.getSelectionModel().getSelectedItem();
+        if (student == null){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("TeacherAdmin");
+            alert.setHeaderText("about");
+            alert.setContentText("nothing is selected");
+
+            alert.showAndWait();
+        }
+        else{
+            absence.setText("Absence declined");
+        }
+    }
+
+    public void AcceptAbsence(ActionEvent event) {
+        Student student = Class1TableView.getSelectionModel().getSelectedItem();
+        if (student == null){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("TeacherAdmin");
+            alert.setHeaderText("about");
+            alert.setContentText("nothing is selected");
+
+            alert.showAndWait();
+        }
+        else{
+            absence.setText("Absence accepted and changed");
+        }
+    }
+
 }
