@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class ClassWindow implements Initializable {
@@ -49,16 +50,33 @@ public class ClassWindow implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     public void HideNotify(ActionEvent event) {
-        if (Notify.isVisible() == false){
+        if (!Notify.isVisible()){
             Notify.setVisible(true);
+            Notify.setText(randNoti());
+            System.out.println(randNoti());
         }
         else{
             Notify.setVisible(false);
+
         }
+
+    }
+
+    private String randNoti(){
+        String rand = "";
+        Random random = new Random();
+        int x = random.nextInt(3);
+
+        if (x == 1){
+            rand = "";
+        }
+        else if (x == 2){
+            rand = "you got a new from a student";
+        }
+        return rand;
 
     }
 }

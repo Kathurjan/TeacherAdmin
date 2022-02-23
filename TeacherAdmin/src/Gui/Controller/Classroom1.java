@@ -29,7 +29,7 @@ public class Classroom1 implements Initializable {
     private TableView<Student> Class1TableView;
 
     @FXML
-    private TableColumn<Student, Integer> StudentAbsence;
+    private TableColumn<Student, Double> StudentAbsence;
 
     @FXML
     private TableColumn<Student, String> StudentName;
@@ -47,7 +47,7 @@ public class Classroom1 implements Initializable {
     private void populateTableview (){
 
         StudentName.setCellValueFactory((new PropertyValueFactory<Student,String>("name")));
-        StudentAbsence.setCellValueFactory((new PropertyValueFactory<Student,Integer>("Absence")));
+        StudentAbsence.setCellValueFactory((new PropertyValueFactory<Student,Double>("Absence")));
 
         System.out.println(studentlogic.getStudent());
         Class1TableView.setItems(studentlogic.getStudent());

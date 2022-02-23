@@ -4,20 +4,20 @@ public class Student {
 
     private String name;
     private int id;
-    private float Absence;
+    private double Absence;
 
-    public Student(String name, int id, int absence) {
+    public Student(String name, int id, double absence) {
         this.name = name;
         this.id = id;
         this.Absence = absence;
     }
 
 
-    public float getAbsence() {
+    public double getAbsence() {
         return Absence;
     }
 
-    public void setAbsence(int absence) {
+    public void setAbsence(double absence) {
         Absence = absence;
     }
 

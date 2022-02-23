@@ -5,15 +5,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.ClassWindow">
+<AnchorPane prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.ClassWindow">
    <children>
-      <Button fx:id="CS1" layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#opencs1" text="Button" />
-      <Button fx:id="cs2" layoutX="43.0" layoutY="117.0" mnemonicParsing="false" onAction="#opencs2" text="Button" />
-      <Button fx:id="cs3" layoutX="43.0" layoutY="188.0" mnemonicParsing="false" onAction="#opencs3" text="Button" />
-      <Button fx:id="cs4" layoutX="43.0" layoutY="249.0" mnemonicParsing="false" onAction="#opencs4" text="Button" />
+      <Button fx:id="CS1" layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#opencs1" text="Computersceince" />
+      <Button fx:id="cs2" layoutX="43.0" layoutY="117.0" mnemonicParsing="false" onAction="#opencs2" text="Marketing" />
+      <Button fx:id="cs3" layoutX="43.0" layoutY="188.0" mnemonicParsing="false" onAction="#opencs3" text="Digital Design" />
+      <Button fx:id="cs4" layoutX="43.0" layoutY="249.0" mnemonicParsing="false" onAction="#opencs4" text="Danish" />
       <Pane layoutX="396.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="Notify" layoutX="1.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextField fx:id="Notify" editable="false" layoutX="1.0" prefHeight="54.0" prefWidth="200.0" />
          </children>
       </Pane>
       <Button layoutX="457.0" layoutY="5.0" mnemonicParsing="false" onAction="#HideNotify" text="notifikation" />
