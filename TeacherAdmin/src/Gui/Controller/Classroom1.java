@@ -14,15 +14,18 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Classroom1 implements Initializable {
-    public TextField screen;
-
-    public Label SelectedStudent;
-    public Label StudentMessage;
-    public Button DeclineAccept;
-    public Button AcceptReason;
-    public TextArea absence;
-
-
+    @FXML
+    private TextField screen;
+    @FXML
+    private Label SelectedStudent;
+    @FXML
+    private Label StudentMessage;
+    @FXML
+    private Button DeclineAccept;
+    @FXML
+    private Button AcceptReason;
+    @FXML
+    private TextArea absence;
 
     private Studentlogic studentlogic;
     @FXML
@@ -90,8 +93,8 @@ public class Classroom1 implements Initializable {
         return message;
     }
 
-
-    public void DeclineAbsence(ActionEvent event) {
+    @FXML
+    private void DeclineAbsence(ActionEvent event) {
         Student student = Class1TableView.getSelectionModel().getSelectedItem();
         if (student == null){
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -105,8 +108,8 @@ public class Classroom1 implements Initializable {
             absence.setText("Absence declined");
         }
     }
-
-    public void AcceptAbsence(ActionEvent event) {
+    @FXML
+    private void AcceptAbsence(ActionEvent event) {
         Student student = Class1TableView.getSelectionModel().getSelectedItem();
         if (student == null){
             Alert alert = new Alert(Alert.AlertType.WARNING);
