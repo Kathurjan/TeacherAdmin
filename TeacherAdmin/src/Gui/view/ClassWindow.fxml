@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.ClassWindow">
+<AnchorPane prefHeight="400.0" prefWidth="653.0" style="-fx-font-family: Arial" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.Controller.ClassWindow">
+   <stylesheets>
+      <URL value="@CSS/style.css" />
+   </stylesheets>
    <children>
-      <Button fx:id="CS1" layoutX="43.0" layoutY="53.0" mnemonicParsing="false" onAction="#opencs1" text="Computersceince" />
-      <Button fx:id="cs2" layoutX="43.0" layoutY="117.0" mnemonicParsing="false" onAction="#opencs2" text="Marketing" />
-      <Button fx:id="cs3" layoutX="43.0" layoutY="188.0" mnemonicParsing="false" onAction="#opencs3" text="Digital Design" />
-      <Button fx:id="cs4" layoutX="43.0" layoutY="249.0" mnemonicParsing="false" onAction="#opencs4" text="Danish" />
-      <Pane layoutX="396.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0">
+      <Pane id="Notify" fx:id="Notify" layoutX="450.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
-            <TextField fx:id="Notify" editable="false" layoutX="1.0" prefHeight="54.0" prefWidth="200.0" />
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="NotificationBox" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
          </children>
       </Pane>
-      <Button layoutX="457.0" layoutY="5.0" mnemonicParsing="false" onAction="#HideNotify" text="notifikation" />
+      <ToolBar layoutX="-7.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="664.0" style="-fx-background-color: #63639e;">
+        <items>
+            <Pane prefHeight="30.0" prefWidth="48.0" />
+            <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#HideNotify" text="Notifications" textFill="#fafafa">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+        </items>
+      </ToolBar>
+      <AnchorPane layoutX="1.0" layoutY="40.0" prefHeight="359.0" prefWidth="186.0" style="-fx-background-color: #c8c8e6; -fx-region-border: right;">
+         <children>
+            <Button fx:id="CS1" layoutX="16.0" layoutY="54.0" mnemonicParsing="false" onAction="#opencs1" text="Computer Science" textFill="#fafafa" />
+            <Button fx:id="cs2" layoutX="16.0" layoutY="98.0" mnemonicParsing="false" onAction="#opencs2" text="Marketing" textFill="#fafafa" />
+            <Button fx:id="cs3" layoutX="14.0" layoutY="137.0" mnemonicParsing="false" onAction="#opencs3" text="Digital Design" textFill="#fafafa" />
+            <Button fx:id="cs4" layoutX="14.0" layoutY="180.0" mnemonicParsing="false" onAction="#opencs4" text="Danish" textFill="#fafafa" />
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="15.0" prefWidth="105.0" text="My Classes ">
+               <font>
+                  <Font name="Arial" size="1.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

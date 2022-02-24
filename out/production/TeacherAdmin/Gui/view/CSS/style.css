@@ -1,0 +1,26 @@
+
+Button
+{
+    -fx-background-radius: 200px;
+    -fx-background-color: #8585e9;
+}
+Button:hover
+{
+    -fx-background-color: #9e9ee9;
+    -fx-cursor: hand;
+}
+TextField
+{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+PasswordField
+{
+    -fx-background-radius: 20px;
+}
+.font
+{
+    -fx-font-family: Arial;
+}
+

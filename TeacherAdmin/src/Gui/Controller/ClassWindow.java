@@ -5,7 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,7 +15,8 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class ClassWindow implements Initializable {
-    public TextField Notify;
+    public Pane Notify;
+    public TextArea NotificationBox;
 
     public void opencs1(ActionEvent actionEvent) throws IOException {
         Parent part = FXMLLoader.load(getClass().getResource("/Gui/view/Classroom1.fxml"));
@@ -55,12 +57,11 @@ public class ClassWindow implements Initializable {
     public void HideNotify(ActionEvent event) {
         if (!Notify.isVisible()){
             Notify.setVisible(true);
-            Notify.setText(randNoti());
+            NotificationBox.setText(randNoti());
             System.out.println(randNoti());
         }
         else{
             Notify.setVisible(false);
-
         }
 
     }
